@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 
 import { nanoid } from 'nanoid';
 
@@ -80,5 +81,10 @@ class ContactForm extends Component {
     );
   }
 }
+
+ContactForm.propTypes = {
+  contacts: PropTypes.array.isRequired,
+  onAddContact: PropTypes.func.isRequired,
+};
 
 export default ContactForm;
